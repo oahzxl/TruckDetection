@@ -27,6 +27,8 @@ wheels/
 *.pth
 *.pkl
 *.npy
+.gitattributes
+.DS_Store
 
 # ipython/jupyter notebooks
 *.ipynb
