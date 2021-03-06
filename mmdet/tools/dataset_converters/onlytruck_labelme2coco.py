@@ -70,9 +70,9 @@ class labelme2coco(object):
 
     def category(self, label):
         category = {}
-        category["supercategory"] = label[0]
-        category["id"] = len(self.categories)
-        category["name"] = label[0]
+        category["supercategory"] = "truck"
+        category["id"] = 0
+        category["name"] = "truck"
         return category
 
     def annotation(self, points, label, num):
@@ -88,17 +88,12 @@ class labelme2coco(object):
 
         annotation["bbox"] = list(map(float, self.getbbox(points)))
 
-        annotation["category_id"] = label[0]  # self.getcatid(label)
+        annotation["category_id"] = 0  # self.getcatid(label)
         annotation["id"] = self.annID
         return annotation
 
     def getcatid(self, label):
-        for category in self.categories:
-            if label == category["name"]:
-                return category["id"]
-        print("label: {} not in categories: {}.".format(label, self.categories))
-        exit()
-        return -1
+        return 0
 
     def getbbox(self, points):
         polygons = points
@@ -148,6 +143,7 @@ class labelme2coco(object):
         os.makedirs(
             os.path.dirname(os.path.abspath(self.save_json_path)), exist_ok=True
         )
+        self.data_coco["categories"] = [self.data_coco["categories"][0]]
         json.dump(self.data_coco, open(self.save_json_path, "w"), indent=4)
 
 
