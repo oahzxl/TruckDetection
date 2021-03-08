@@ -5,10 +5,9 @@ model = dict(
     backbone=dict(depth=101),
     roi_head=dict(
         bbox_head=dict(num_classes=1)))
-checkpoint_config = dict(interval=5)
-runner = dict(type='EpochBasedRunner', max_epochs=20)
+runner = dict(type='EpochBasedRunner', max_epochs=15)
 optimizer = dict(type='SGD', lr=0.01, momentum=0.9, weight_decay=0.0001)
-
+# lr: 1e-2 > 2e-2 > 4e-2
 
 # Modify dataset related settings
 dataset_type = 'COCODataset'
