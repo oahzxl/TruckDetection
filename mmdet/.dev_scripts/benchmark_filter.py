@@ -116,7 +116,7 @@ benchmark_pool = [
     'configs/vfnet/vfnet_r50_fpn_1x_coco.py',
     'configs/yolact/yolact_r50_1x8_coco.py',
     'configs/yolo/yolov3_d53_320_273e_coco.py',
-    'configs/sparse_rcnn/sparse_rcnn_r50_fpn_1x_coco.py',
+    'configs/sparse_rcnn/sparse_rcnn_r50_fpn_1x_coco1.py',
     'configs/scnet/scnet_r50_fpn_1x_coco.py'
 ]
 

@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=1,0 PORT=29505 bash tools/dist_train.sh configs/_truck/sparse_rcnn_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco1.py 2
+CUDA_VISIBLE_DEVICES=1,0 PORT=29506 bash tools/dist_train.sh configs/_truck/sparse_rcnn_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco2.py 2
