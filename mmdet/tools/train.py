@@ -23,7 +23,7 @@ def parse_args():
     parser.add_argument(
         'config',
         help='train config file path',
-        default="../configs/_truck/499_faster_rcnn_r101_fpn_1x_coco.py")
+        default="../configs/_truck/8570_faster_rcnn_r101_fpn_1x_coco.py")
     parser.add_argument(
         '--work-dir',
         help='the dir to save logs and models')
